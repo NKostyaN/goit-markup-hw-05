@@ -618,6 +618,13 @@ img {
   border-width: 1px;
   border-radius: 50%;
   border-color: rgba(0, 0, 0, 0.1);
+  transition: var(--anim-fast);
+  transition-property: background-color, fill;
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--ocean-cl);
+  fill: var(--white-cl);
 }
 .modal-caption {
   padding: 0 24px;
