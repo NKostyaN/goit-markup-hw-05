@@ -584,8 +584,10 @@ img {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: var(--anim-fast);
-  transition-property: opacity, visibility;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: var(--anim-fast); */
+  /* transition-property: opacity, visibility; */
 }
 .backdrop.is-open {
   opacity: 1;
@@ -605,8 +607,10 @@ img {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: var(--dairy-cl);
   transform: translate(-50%, -200%) scale(0.25);
-  transition: var(--anim-fast);
-  transition-property: transform, opacity;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: var(--anim-fast); */
+  /* transition-property: transform, opacity; */
 }
 .backdrop.is-open .modal {
   transform: translate(-50%, -50%) scale(1);
@@ -626,8 +630,11 @@ img {
   border-width: 1px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: var(--anim-fast);
-  transition-property: border, background-color, fill;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: var(--anim-fast); */
+  /* transition-property: border, background-color, fill; */
 }
 .modal-close-icon {
 }
@@ -693,7 +700,7 @@ img {
 .modal-form-input:focus + .modal-form-icon {
   fill: var(--iris-sl);
 }
-.modal-form-field .modal-form-comment {
+.comment {
   margin-bottom: 16px;
 }
 .modal-form-comment {
