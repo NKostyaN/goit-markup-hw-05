@@ -514,12 +514,10 @@ img {
   color: var(--white-cl);
   margin-bottom: 16px;
 }
-.footer-item-subscribe .container {
-  padding: 0;
-}
 .subscribe-form {
   display: flex;
   gap: 24px;
+  padding: 0;
 }
 .subscribe-input {
   border: 1px solid var(--white-cl);
@@ -543,10 +541,11 @@ img {
 }
 .subscribe-btn {
   display: flex;
-  gap: 16px;
-  min-width: 169px;
+  min-width: 165px;
   height: 40px;
   padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
   font-family: var(--primary-font);
   font-weight: 500;
   font-size: 16px;
@@ -564,6 +563,9 @@ img {
 .subscribe-btn:hover,
 .subscribe-btn:focus {
   background-color: var(--ocean-cl);
+}
+.subscribe-btn .socials-icon {
+  margin-left: 16px;
 }
 /* #endregion */
 
@@ -590,9 +592,10 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%);
   border-radius: 4px;
-  max-width: 408px;
+  width: 408px;
   min-height: 584px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -614,20 +617,26 @@ img {
   justify-content: center;
   width: 24px;
   height: 24px;
+  padding: 0;
   background-color: var(--cornflower-cl);
   border-width: 1px;
   border-radius: 50%;
-  border-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: var(--anim-fast);
-  transition-property: background-color, fill;
+  transition-property: border, background-color, fill;
+}
+.modal-close-icon {
+}
+.modal-close-icon:hover,
+.modal-close-icon:focus {
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
+  border: none;
   background-color: var(--ocean-cl);
   fill: var(--white-cl);
 }
 .modal-caption {
-  padding: 0 24px;
   width: 100%;
   font-weight: 500;
   font-size: 16px;
@@ -635,11 +644,9 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--navy-blue-cl);
-  margin-top: 72px;
   margin-bottom: 16px;
 }
 .modal-form {
-  padding: 0 24px 24px 24px;
 }
 .modal-form-field {
   margin-bottom: 8px;
@@ -746,7 +753,7 @@ input[type="checkbox"]:focus-visible + .modal-form-desc > .modal-form-checkbox {
   color: var(--iris-sl);
 }
 .modal-btn {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   min-width: 169px;
