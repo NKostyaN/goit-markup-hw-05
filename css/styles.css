@@ -630,7 +630,8 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* transition: var(--anim-fast); */
   /* transition-property: border, background-color, fill; */
 }
@@ -645,7 +646,7 @@ img {
 .modal-close-btn:focus {
   border: none;
   background-color: var(--ocean-cl);
-  /* fill: var(--white-cl); */
+  fill: var(--white-cl);
 }
 .modal-caption {
   width: 100%;
@@ -656,8 +657,6 @@ img {
   text-align: center;
   color: var(--navy-blue-cl);
   margin-bottom: 16px;
-}
-.modal-form {
 }
 .modal-form-field {
   margin-bottom: 8px;
@@ -730,15 +729,13 @@ img {
   color: var(--navy-blue-modal-cl);
 }
 .modal-form-agreement {
+  margin-bottom: 24px;
+}
+.modal-form-desc {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate-cl);
-  margin-bottom: 24px;
-}
-.modal-form-desc {
-  letter-spacing: -0.02em;
-  color: rgba(64, 64, 64, 0.6);
 }
 .modal-form-checkbox {
   display: inline-flex;
@@ -749,21 +746,17 @@ img {
   margin-right: 8px;
   border-radius: 2px;
   border: 1px solid var(--navy-blue-modal-cl);
-  transition: var(--anim-fast);
-  transition-property: border-color, background-color, fill;
-}
-.modal-form-checkbox-icon {
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: var(--anim-fast); */
+  /* transition-property: border-color, background-color, fill; */
 }
 input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
   border: none;
   border-color: var(--ocean-cl);
   background-color: var(--ocean-cl);
-}
-input[type="checkbox"]:checked
-  + .modal-form-desc
-  > .modal-form-checkbox
-  > .modal-form-checkbox-icon {
   fill: #f4f4fd;
 }
 input[type="checkbox"]:focus-visible + .modal-form-desc > .modal-form-checkbox {
